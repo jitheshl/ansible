@@ -1,6 +1,6 @@
 - name: PING
-  host:web
-  task:
+  hosts:web
+  tasks:
   - name: ping the server
   ansible.builtin.ping:
 
