@@ -6,6 +6,6 @@
     time: 120
     name: jithesh
   tasks:
-    name: print a variable
+  - name: print a variable
     ansible.builtin.debug:
-      msg: "This is {{course}} with time {{time}} and insturactor is {{name}}"
+    msg: "This is {{course}} with time {{time}} and insturactor is {{name}}"
