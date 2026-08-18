@@ -5,7 +5,7 @@
     course: devops
     time: 120
     name: jithesh
-  taska:
+  tasks:
     name: print a variable
     ansible.builtin.debug:
       msg: "This is {{course}} with time {{time}} and insturactor is {{name}}"
