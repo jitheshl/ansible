@@ -1,0 +1,20 @@
+- name: variables local and global
+  hosts: local
+  connection: local
+  vars:
+    course: devops
+    time: 120
+    name: jithesh
+  tasks:
+    - name: print the variables1
+      vars:
+          course: ansible
+      ansible.builtin.debug:
+        msg: This course is {{course}}
+
+  tasks:
+    - name: print the variable2
+      ansible.builtin.debug:
+        msg: this is course {{course}}
+
+        
