@@ -1,6 +1,6 @@
 - name: datatypes
   hosts: local
-  connections: local
+  connection: local
   vars:
     name: L jithesh
     rollno: 20
