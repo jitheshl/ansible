@@ -1,0 +1,18 @@
+- name: datatypes
+  hosts: local
+  connections: local
+  vars:
+    name: L jithesh
+    rollno: 20
+    topics:
+    - linux
+    - shellscripting
+    - ansible
+    live: true
+    tools:
+      ci: jenkins
+      linux: gitbash
+  tasks:
+  - name: print the datatypes
+    ansible.builtin.debug:
+      msg: "{{name}},{{rollno}},{{topics}},{{live}},{{tools}}"
