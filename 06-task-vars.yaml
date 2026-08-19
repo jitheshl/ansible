@@ -12,7 +12,7 @@
       ansible.builtin.debug:
         msg: This course is {{course}}
 
-  tasks:
+  
     - name: print the variable2
       ansible.builtin.debug:
         msg: this is course {{course }}
