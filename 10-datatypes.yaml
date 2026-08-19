@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars:
-    name: L jithesh
-    rollno: 20
-    topics:
+    name: L jithesh #string
+    rollno: 20 #number
+    topics: #lists
     - linux
     - shellscripting
     - ansible
-    live: true
-    tools:
+    live: true #bool
+    tools: #map
       ci: jenkins
       linux: gitbash
   tasks:
