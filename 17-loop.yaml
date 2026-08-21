@@ -1,23 +1,11 @@
 - name : loops
   hosts: local
   connection: local
-  vars_prompt:
-  - name: name1
-    prompt: "Enter name:-"
-    private: false
-  - name: name1
-    prompt: "Enter name:-"
-    private: false
-  - name: name1
-    prompt: "Enter name:-"
-    private: false
   tasks:
   - name: print loop
     ansible.builtin.debug:
       msg: "Hello {{item}}"
     loop:
-    - name1
-    - name2
-    - name3
-
-    
+    - ramesh
+    - suresh
+    - jithesh
