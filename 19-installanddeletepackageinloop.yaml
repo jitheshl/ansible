@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: install and deletion of package
-    ansible.buitlin.dnf:
+    ansible.builtin.dnf:
       name: {{"item.name"}}
       state: {{"item.state"}}
     loop:
