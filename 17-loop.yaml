@@ -6,6 +6,9 @@
     ansible.builtin.debug:
       msg: "Hello {{item}}"
     loop:
-    - ramesh
-    - suresh
-    - jithesh
+    - prompt: enter the  name:-
+      private: false
+    - prompt: enter the  name:-
+      private: false
+    - prompt: enter the   name:-
+      private: false
