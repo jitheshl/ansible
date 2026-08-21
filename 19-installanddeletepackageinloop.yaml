@@ -9,5 +9,5 @@
     loop:
     - {name: 'git', state: 'present'}
     - {name: 'mysql', state: 'absent'}
-    - {name: 'git', state: 'present'}
+    - {name: 'git', state: 'absent'}
     - {name: 'zip', state: 'present'}
