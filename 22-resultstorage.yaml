@@ -1,0 +1,10 @@
+- name : outputstorage
+  hosts: local
+  connection: local
+  tasks:
+  - name: output storage
+    ansible.builtin.command: la -ltr
+    register: output
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{output}}" 
