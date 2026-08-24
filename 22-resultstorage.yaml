@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: output storage
-    ansible.builtin.command: la -ltr
+    ansible.builtin.command: ls -ltr
     register: output
   - name: print the output
     ansible.builtin.debug:
