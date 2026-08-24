@@ -26,18 +26,18 @@
         - {'key': 'trainer', 'value': 'shivakumar'}
     ansible.builtin.debug:
       msg: "{{course | items2dict}}"
-- name: convert upper to lower
-  vars:
-    name: "L JITHESH"
-  ansible.builtin.debug:
-    msg: "{{name | lower}}"
-- name: convert upper to lower
-  vars:
-    name: "L JITHESH"
-  ansible.builtin.debug:
-    msg: "{{name | lower}}"
-- name: find min and max
-  vars:
-    number: [1,38,57,87,98]
-  ansible.nuiltin.debug:
-    msg: "min is :- {{number|min}} and max is :- {{number|max}}" 
+  - name: convert upper to lower
+    vars:
+      name: "L JITHESH"
+    ansible.builtin.debug:
+      msg: "{{name | lower}}"
+  - name: convert upper to lower
+    vars:
+      name: "L JITHESH"
+    ansible.builtin.debug:
+      msg: "{{name | lower}}"
+  - name: find min and max
+    vars:
+      number: [1,38,57,87,98]
+    ansible.nuiltin.debug:
+      msg: "min is :- {{number|min}} and max is :- {{number|max}}" 
