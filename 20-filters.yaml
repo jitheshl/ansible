@@ -55,4 +55,10 @@
       ip: 258.255.255.255
     ansible.builtin.debug:
       msg: "{{ip | ansible.builtin.ipaddr}}"
+
+  - name: find ip address is valid or not
+    vars:
+      ip: 192.168.1.1
+    ansible.builtin.debug:
+      msg: "{{ip | ansible.builtin.ipaddr}}"
    
