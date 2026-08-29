@@ -1,6 +1,0 @@
-- name: install ngins
-  hosts: frontend
-  become: yes
-  roles:
-  - frontend
-  
