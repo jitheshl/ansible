@@ -1,5 +1,6 @@
 - name: install ansible
-  hosts: all
+  # hosts: all
+  hosts: nginx
   become: yes
   serial: 7
   tasks:
