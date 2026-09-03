@@ -27,6 +27,36 @@
       - backend
       - frontend
 
+  - name: create ec2 istannce
+  hosts: local
+  connection: local
+  vars:
+    subnetid: subnet-035e7f4f74d33eca1
+    sg_id: sg-06597f7d289c14461
+    ami_id: ami-0220d79f3f480ecf5
+    instance_type: t3.micro
+  tasks:
+  - name: install aws python libraries.
+    ansible.builtin.pip:
+      name: "{{item}}"
+      executable: pip3.9
+    loop:
+      - boto3
+      - botocore
+
+  - name: create ec2 instance_type
+    amazon.aws.ec2_instance:
+      name: "{{item}}"
+      subnet_id: "{{subnetid}}"
+      security_group: "{{sg_id}}"
+      image_id: "{{ami_id}}"
+      instance_type: "{{instance_type}}"
+    loop:
+      - mysql
+      - backend
+      - frontend
+
   - name: Print the private IP address
     ansible.builtin.debug:
     msg: "{{ ansible_all_ipv4_addresses | ansible.utils.ipaddr('private') | first }}"
+
