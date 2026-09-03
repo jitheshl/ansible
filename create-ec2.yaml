@@ -27,3 +27,6 @@
       - backend
       - frontend
 
+  - name: Print the private IP address
+    ansible.builtin.debug:
+    msg: "{{ ansible_all_ipv4_addresses | ansible.utils.ipaddr('private') | first }}"
